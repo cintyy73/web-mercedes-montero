@@ -21,7 +21,7 @@ export default function App() {
       <FAQ />
       <ContactForm />
        <Footer />
-      <ButtonWhatsApp numero="5491123456789" mensaje="Hola! Quiero saber más." />
+      <ButtonWhatsApp  />
     </Box>
   );
 }
