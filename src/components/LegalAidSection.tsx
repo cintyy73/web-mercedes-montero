@@ -16,13 +16,13 @@ import {
 
 export default function LegalAidSection() {
   return (
-    <Box py={20} px={6} bg="white" color="gray.700">
+    <Box py={20} px={6} bg="brand.100" color="text.dark">
       {/* Título principal */}
       <VStack spacing={6} textAlign="center" mb={16}>
-        <Heading size="xl" color="brand.500">
+        <Heading size="xl" color="brand.800">
           ¿Tu obra social o prepaga se niega a cubrir un tratamiento?
         </Heading>
-        <Text fontSize="lg" maxW="3xl" color="gray.700">
+        <Text fontSize="lg" maxW="3xl">
           No estás sola. Te acompaño legalmente para garantizar el acceso a tus derechos en salud, fertilidad y discapacidad.
         </Text>
       </VStack>
@@ -49,7 +49,7 @@ export default function LegalAidSection() {
           <Box
             key={i}
             p={6}
-            bg="gray.50"
+            bg="white"
             borderRadius="2xl"
             shadow="md"
             textAlign="center"
@@ -65,7 +65,7 @@ export default function LegalAidSection() {
 
       {/* Preguntas frecuentes */}
       <VStack spacing={10} align="stretch" maxW="4xl" mx="auto" mb={20}>
-        <Heading size="lg" textAlign="center" color="brand.500">
+        <Heading size="lg" textAlign="center" color="brand.800">
           Preguntas Frecuentes
         </Heading>
 
@@ -83,7 +83,7 @@ export default function LegalAidSection() {
             a: 'Diagnóstico, tratamientos, procedimientos, consultas médicas y la medicación con cobertura total.',
           },
         ].map((item, i) => (
-          <Box key={i} p={6} bg="gray.50" borderRadius="xl" shadow="sm">
+          <Box key={i} p={6} bg="white" borderRadius="xl" shadow="sm">
             <Text fontWeight="bold" mb={2}>
               <Icon as={FaQuestionCircle} color="accent.500" mr={2} />
               {item.q}
@@ -95,14 +95,14 @@ export default function LegalAidSection() {
 
       {/* CTA final */}
       <Box
-        bg="brand.500"
+        bg="brand.800"
         py={10}
         px={6}
         textAlign="center"
         borderRadius="xl"
         maxW="3xl"
         mx="auto"
-        color="white"
+        color="text.light"
       >
         <Heading size="md" mb={4}>
           ¿Querés que evalúe tu caso?
@@ -112,9 +112,9 @@ export default function LegalAidSection() {
         </Text>
         <Button
           size="lg"
-          bg="white"
-          color="brand.500"
-          _hover={{ bg: 'gray.100' }}
+          bg="accent.500"
+          color="white"
+          _hover={{ opacity: 0.9 }}
         >
           Escribime ahora
         </Button>

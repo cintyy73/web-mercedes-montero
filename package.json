@@ -8,8 +8,10 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+     "test": "echo \"No tests yet\" && exit 0"
   },
+  
   "dependencies": {
     "@chakra-ui/react": "^2.7",
     "@emotion/react": "^11.14.0",
