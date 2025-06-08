@@ -1,40 +1,28 @@
+import { Box, Icon } from '@chakra-ui/react';
+import { FaWhatsapp } from 'react-icons/fa';
 
-import { FaWhatsapp } from "react-icons/fa";
-
-const ButtonWhatsApp = ({ numero = "5491123456789", mensaje = "Hola! Quisiera más información." }) => {
-  const urlWhatsapp = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-
+export default function ButtonWhatsApp() {
   return (
-    <a
-      href={urlWhatsapp}
-      target="_blank"
-      rel="noopener noreferrer"
-      style={styles.boton}
-      aria-label="Chat WhatsApp"
+    <Box
+      as="a"
+      href="https://wa.me/5491112345678" // <-- reemplazá con tu número
+      position="fixed"
+      bottom="4"
+      right="4"
+      bg="accent.500"
+      color="white"
+      borderRadius="full"
+      w="14"
+      h="14"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      boxShadow="lg"
+      zIndex="overlay"
+      cursor="pointer"
+      _hover={{ opacity: 0.9 }}
     >
-      <FaWhatsapp size={28} />
-    </a>
+      <Icon as={FaWhatsapp} boxSize={6} />
+    </Box>
   );
-};
-
-const styles = {
-  boton: {
-    position: "fixed",
-    bottom: "30px",
-    right: "30px",
-    backgroundColor: "#25D366",
-    color: "white",
-    borderRadius: "50%",
-    width: "56px",
-    height: "56px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    boxShadow: "0 4px 8px rgba(0,0,0,0.3)",
-    zIndex: 1000,
-    cursor: "pointer",
-    textDecoration: "none",
-  },
-};
-
-export default ButtonWhatsApp;
+}
